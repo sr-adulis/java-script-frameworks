@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
@@ -6,6 +6,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
+		$("#menu ul li").css("color","blue");
 		$('#menu ul li').prepend('<span></span>');
 			$('#menu ul li').each(function(){
 				var texto= $(this).find('a').text();
@@ -13,52 +14,51 @@
 			});
 			$('#menu ul li').hover(function(){
 				$(this).find('span').stop().animate({
-					marginTop:"-40px"
+					marginLeft:"+40px"
 				},400);
 			},function(){
 				$(this).find('span').stop().animate({
-					marginTop:"0px"
+					marginLeft:"0px"
 				},300);
 			});
 	});
 	</script>
-
-	<style>
-		body{background:black;
+<style>
+			body
+			{background:black;
 			}
-		#menu{width:700px;
+		#menu{
+			width:700px;
+			height:100%;
 			margin:auto;
+			position:absolute;
            	}
 		#menu ul{list-style:none;
-			font-size:18px;
+			font-size:1.125em;
 			font-family:"Hobo Std";
 			margin:0px;
 			padding:0px;
-			height:40px;
 			overflow:hidden;
-			}
-		#menu ul li{float:left;
-			}
-		#menu ul li a, #menu ul li span{width:100px;
-			padding:10px 20px;
-			height:18px;
-			color:#FFFFFF;
-			/*background:url("images/Degrade_img.jpg") repeat-x; */
-            background:red;
-			text-decoration:none;
-			overflow:hidden;
-			text-align:center;
 			}
 		#menu ul li span{
 			display:block;
 			cursor:pointer;
 			}
-		#menu ul li a{
-			float:left;
-			background:url("images/Degrade_img.jpg") repeat-x left bottom;
-			color:#000000;
-            height:10px;
+		#menu ul li a, #menu ul li span{width:100px;
+			padding:10px 20px;
+			height:18px;
+			color:white;
+            background:red;
+			text-decoration:none;
+			overflow:hidden;
+			text-align:center;
 			}
+		#menu ul li a{
+			background:url("images/Degrade_img.jpg") repeat-x left bottom;
+			color:#000;
+            height:10px;
+			display:none;
+		}
 	</style>
 </head>
 <body>
@@ -73,3 +73,7 @@
 	</div>
 </body>
 </html>
+
+
+
+

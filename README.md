@@ -1,6 +1,8 @@
 # java-script-frameworks
 Tutorials and materials for learning a java-script framework
 
+Thales Adulis Silva - 31611389 - 2F
+
 Exercício de jQuery
 
 1.	Torná-lo responsivo, para todas as mídias.
